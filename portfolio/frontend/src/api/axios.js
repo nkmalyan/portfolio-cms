@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// Change this to your Render URL after deploying backend in Step 2
-export const BACKEND_URL = "http://localhost:5000"; 
+// Ye line ab environment variable use karegi, jo humne Render par set kiya hai
+export const BACKEND_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"; 
 
 const API = axios.create({
   baseURL: `${BACKEND_URL}/api`,
